@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>Cafe</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    
+    <div class="header">
+      <nav>
+      <div class="nav-wrapper">
+        <ul>
+          <a href="#" class="brand-logo">〇〇カフェ</a>
+        </ul>
+        <li><a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons left">dehaze</i></a></li>
+      </div>
+    </nav>
+    
+       <!--マークアップ追記 -->
+      <ul id="slide-out" class="sidenav sidenav-fixed">
+        <li><a class="button" href="#concept"　data-turbolinks="false">コンセプト</a></li>
+        <li><a class="menu" href="#menu"　data-turbolinks="false">メニュー</a></li>
+        <li><a class="shedule" href="#schedule"　data-turbolinks="false">スケジュール</a></li>
+        <li><a class="about" href="#about"　data-turbolinks="false">店舗情報</a></li>
+      </ul>
+  
+     <!--スクリプト追記 -->
+    <!--  <script>-->
+    <!--  document.addEventListener('DOMContentLoaded', function() {-->
+    <!--    var elems = document.querySelectorAll('.sidenav');-->
+    <!--    var instances = M.Sidenav.init(elems, {});-->
+    <!--  });-->
+    <!--//</script>-->
+  
+     <!--スタイル追記 -->
+    <style>
+      header, body, footer {
+        padding-left: 300px;
+      }
+  
+      @media only screen and (max-width : 100%) {
+        header, body, footer {
+          padding-left: 0;
+        }
+      }
+    </style>
+  
+    </div>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+  
+  
+</html>
